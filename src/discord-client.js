@@ -1,14 +1,19 @@
 const Discord = require("discord.js");
+const nbx = require("noblox.js");
 
 const TOKEN = process.env.TOKEN;
 
 const PREFIX = process.env.PREFIX;
+
+//commands
+const myinfo = require("./commands/myinfo");
 
 module.exports = () => {
   const COMMANDS = {
     ping: (message) => {
       message.channel.send("pong");
     },
+    myinfo: myinfo(),
   };
 
   const client = new Discord.Client();
@@ -21,31 +26,14 @@ module.exports = () => {
 
   updateActivity = () => {
     client.user
-      .setActivity(
-        `mp!help | Currently on ${guildCount} servers | getrbots.com`,
-        {
-          type: "LISTENING",
-        }
-      )
+      .setActivity(`${PREFIX}help | ${client.user.username}`, {
+        type: "LISTENING",
+      })
       .then((presence) =>
         console.log(`Activity set to ${presence.activities[0].name}`)
       )
       .catch(console.error);
   };
-
-  //joined a server
-  client.on("guildCreate", (guild) => {
-    console.log("Joined a new guild: " + guild.name);
-    guildCount++;
-    updateActivity();
-  });
-
-  //removed from a server
-  client.on("guildDelete", (guild) => {
-    console.log("Left a guild: " + guild.name);
-    guildCount--;
-    updateActivity();
-  });
 
   client.on("message", async (message) => {
     if (message.author.bot) return;
