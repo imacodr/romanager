@@ -56,6 +56,13 @@ module.exports = () => {
       );
       return;
     }
+    async function run() {
+      await nbx.setCookie(process.env.COOKIE);
+    }
+
+    run();
+
+    nbx.cookieLogin(process.env.COOKIE);
 
     commandObj(message, values.join(" "));
   });
