@@ -19,7 +19,9 @@ module.exports = () => async (message, value) => {
     const doneembed = new Discord.MessageEmbed()
       .setColor(`GREEN`)
       .setTitle("✅ Successfully changed user rank")
-      .setDescription(`Succsessfully changed user rank to ${values[1]}.`)
+      .setDescription(
+        `Succsessfully changed ${values[0]}'s rank to ${values[1]}.`
+      )
       .setThumbnail(message.author.avatarURL())
       .setTimestamp()
       .setFooter(`Rank changed made by ${message.author.username}`);

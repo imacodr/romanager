@@ -8,7 +8,7 @@ module.exports = () => async (message, value) => {
   const doneembed = new Discord.MessageEmbed()
     .setColor(`GREEN`)
     .setTitle("✅ Successfully Exiled")
-    .setDescription(`Succsessfully exiled user.`)
+    .setDescription(`Succsessfully exiled ${value}.`)
     .setThumbnail(message.author.avatarURL())
     .setTimestamp()
     .setFooter(`Exilation made by ${message.author.username}`);

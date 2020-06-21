@@ -5,16 +5,16 @@ module.exports = () => async (message, value) => {
   if (!message.member.hasPermission("MANAGE_SERVER"))
     return message.channel.send("You do not have permissions.");
 
+  const userid = await nbx.getIdFromUsername(value);
   const doneembed = new Discord.MessageEmbed()
     .setColor(`GREEN`)
     .setTitle("✅ Successfully Demoted")
-    .setDescription(`Succsessfully demoted user.`)
+    .setDescription(`Succsessfully demoted ${value}.`)
     .setThumbnail(message.author.avatarURL())
     .setTimestamp()
     .setFooter(`Demotion made by ${message.author.username}`);
 
   try {
-    const userid = await nbx.getIdFromUsername(value);
     await nbx.demote(process.env.GROUPID, userid);
     message.channel.send(doneembed);
   } catch (e) {
