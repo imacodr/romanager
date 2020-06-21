@@ -1,19 +1,40 @@
 const Discord = require("discord.js");
 const nbx = require("noblox.js");
 
+const firebase = require("./firebase");
 const TOKEN = process.env.TOKEN;
 
 const PREFIX = process.env.PREFIX;
 
+async function refreshCookie() {
+  const cookie = await nbx.refreshCookie();
+  firebase.setCookie(cookie);
+}
+
+async function startApp() {
+  const cookie = await firebase.getCookie();
+
+  await nbx.setCookie(cookie);
+  // Do everything else, calling functions and the like.
+  let currentUser = await nbx.getCurrentUser();
+  console.log(currentUser);
+
+  setInterval(refreshCookie, 30000);
+}
+
 //commands
 const myinfo = require("./commands/myinfo");
+const changerank = require("./commands/changerank");
+const promote = require("./commands/promote");
 
-module.exports = () => {
+module.exports = async () => {
   const COMMANDS = {
     ping: (message) => {
       message.channel.send("pong");
     },
     myinfo: myinfo(),
+    changerank: changerank(),
+    promote: promote(),
   };
 
   const client = new Discord.Client();
@@ -56,16 +77,10 @@ module.exports = () => {
       );
       return;
     }
-    async function run() {
-      await nbx.setCookie(process.env.COOKIE);
-    }
-
-    run();
-
-    nbx.cookieLogin(process.env.COOKIE);
-
     commandObj(message, values.join(" "));
   });
+  await startApp();
+  // await refreshCookie();
 
   client.login(TOKEN);
 

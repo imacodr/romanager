@@ -6,7 +6,7 @@ const discord = require("./src/discord-client");
 //START DISCORD BOT
 const discordClient = discord();
 
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 3300;
 
 const app = express();
 

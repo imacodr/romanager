@@ -1,10 +1,11 @@
-const noblox = require("noblox.js");
+const nbx = require("noblox.js");
 const Discord = require("discord.js");
 
 module.exports = () => async (message, value) => {
   let channel = message.channel;
+  const userid = await nbx.getIdFromUsername(value);
 
-  noblox.getPlayerInfo(value).then((playerInfo) => {
+  await nbx.getPlayerInfo(userid).then((playerInfo) => {
     let infoEmbed = new Discord.MessageEmbed()
       .setColor(`BLUE`)
       .setTitle(`${playerInfo.username}'s account`)
@@ -13,7 +14,6 @@ module.exports = () => async (message, value) => {
       .addField(`Join Date`, playerInfo.joinDate)
       .addField(`Description`, playerInfo.blurb)
       .setThumbnail(playerInfo.avatar);
-
     channel.send(infoEmbed);
   });
 };
