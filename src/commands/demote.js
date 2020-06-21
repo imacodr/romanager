@@ -7,15 +7,15 @@ module.exports = () => async (message, value) => {
 
   const doneembed = new Discord.MessageEmbed()
     .setColor(`GREEN`)
-    .setTitle("✅ Successfully Promoted")
-    .setDescription(`Succsessfully promoted user.`)
+    .setTitle("✅ Successfully Demoted")
+    .setDescription(`Succsessfully demoted user.`)
     .setThumbnail(message.author.avatarURL())
     .setTimestamp()
-    .setFooter(`Promotion made by ${message.author.username}`);
+    .setFooter(`Demotion made by ${message.author.username}`);
 
   try {
     const userid = await nbx.getIdFromUsername(value);
-    await nbx.promote(process.env.GROUPID, userid);
+    await nbx.demote(process.env.GROUPID, userid);
     message.channel.send(doneembed);
   } catch (e) {
     const errembed = new Discord.MessageEmbed()
@@ -23,7 +23,7 @@ module.exports = () => async (message, value) => {
       .setTitle("❌ Failed")
       .setDescription(e.message)
       .setTimestamp()
-      .setFooter(`Promotion failed by ${message.author.username}`);
+      .setFooter(`Demotion failed by ${message.author.username}`);
 
     message.channel.send(errembed);
   }

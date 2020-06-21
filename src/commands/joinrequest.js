@@ -7,15 +7,16 @@ module.exports = () => async (message, value) => {
 
   const doneembed = new Discord.MessageEmbed()
     .setColor(`GREEN`)
-    .setTitle("✅ Successfully Promoted")
-    .setDescription(`Succsessfully promoted user.`)
+    .setTitle("✅ Successfully Accepted/Denied")
+    .setDescription(`Succsessfully accepted/denied user.`)
     .setThumbnail(message.author.avatarURL())
     .setTimestamp()
-    .setFooter(`Promotion made by ${message.author.username}`);
+    .setFooter(`Acceptance/Denience made by ${message.author.username}`);
 
   try {
-    const userid = await nbx.getIdFromUsername(value);
-    await nbx.promote(process.env.GROUPID, userid);
+    const values = value.split(" ");
+    const userid = await nbx.getIdFromUsername(values[0]);
+    await nbx.handleJoinRequest(process.env.GROUPID, userid, values[1]);
     message.channel.send(doneembed);
   } catch (e) {
     const errembed = new Discord.MessageEmbed()
@@ -23,7 +24,7 @@ module.exports = () => async (message, value) => {
       .setTitle("❌ Failed")
       .setDescription(e.message)
       .setTimestamp()
-      .setFooter(`Promotion failed by ${message.author.username}`);
+      .setFooter(`Acceptance/Denience failed by ${message.author.username}`);
 
     message.channel.send(errembed);
   }

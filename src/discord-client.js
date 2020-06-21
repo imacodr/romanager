@@ -26,6 +26,9 @@ async function startApp() {
 const myinfo = require("./commands/myinfo");
 const changerank = require("./commands/changerank");
 const promote = require("./commands/promote");
+const demote = require("./commands/demote");
+const exile = require("./commands/exile");
+const joinrequest = require("./commands/joinrequest");
 
 module.exports = async () => {
   const COMMANDS = {
@@ -35,6 +38,9 @@ module.exports = async () => {
     myinfo: myinfo(),
     changerank: changerank(),
     promote: promote(),
+    demote: demote(),
+    exile: exile(),
+    joinrequest: joinrequest(),
   };
 
   const client = new Discord.Client();

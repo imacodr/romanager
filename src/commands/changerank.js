@@ -4,6 +4,9 @@ const nbx = require("noblox.js");
 const Discord = require("discord.js");
 
 module.exports = () => async (message, value) => {
+  if (!message.member.hasPermission("MANAGE_SERVER"))
+    return message.channel.send("You do not have permissions.");
+
   try {
     const values = value.split(" ");
     const userid = await nbx.getIdFromUsername(values[0]);
