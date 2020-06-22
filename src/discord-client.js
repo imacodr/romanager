@@ -23,7 +23,7 @@ async function startApp() {
 }
 
 //commands
-const myinfo = require("./commands/myinfo");
+const info = require("./commands/info");
 const changerank = require("./commands/changerank");
 const promote = require("./commands/promote");
 const demote = require("./commands/demote");
@@ -35,7 +35,7 @@ module.exports = async () => {
     ping: (message) => {
       message.channel.send("pong");
     },
-    myinfo: myinfo(),
+    info: info(),
     changerank: changerank(),
     promote: promote(),
     demote: demote(),
