@@ -1,9 +1,5 @@
 <p align="center">
-    <a href="https://eryn.io/RoVer/"><img src="/assets/Logo_Text.svg" alt="RoVer" height="150" /></a>
-</p>
-
-<p align="center">
-    <a href="https://discordapp.com/oauth2/authorize?client_id=298796807323123712&scope=bot&permissions=402656264"><img src="/assets/Add_RoVer.png" alt="Add" /></a>
+    <a href="https://discord.gg/gBTFE8r"><img src="https://imgur.com/a/dXxldJ3" alt="moblox bot" height="150" /></a>
 </p>
 
 <p align="center">
