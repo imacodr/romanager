@@ -5,7 +5,7 @@
 <p align="center">
   <a href="https://standardjs.com"><img src="https://img.shields.io/badge/code_style-standard-brightgreen.svg" alt="JavaScript Style Guide"></a>
   <br>
-  <a href="https://discord.gg/gBTFE8r"><img src="https://img.shields.io/discord/425800792679645204.svg" alt="Discord"></a>
+  <a href="https://discord.gg/gBTFE8r"><img src="https://img.shields.io/discord/701227494631538699" alt="Discord"></a>
 </p>
 
 <h1 align="center">Documentation can be found below</h1>
@@ -15,7 +15,7 @@
 1. Fork the repo to your own github account.
    ![fork](./docs/fork.png)
 1. [Create a bot in the Discord developer portal.](/docs/developer-portal.md)
-1. Create a firebase project and setup the database.
+1. [Create a firebase project and setup the database.](/docs/firebase.md)
 1. create a heroku account to host your bot
 
 ### Running development mode
