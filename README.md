@@ -13,20 +13,12 @@
 ## Steps to host without changing the code
 
 1. Fork the repo to your own github account.
-   ![fork](/fork.png)
+   ![fork](docs/fork.png)
 1. [Create a bot in the Discord developer portal.](/docs/developer-portal.md)
 1. Create a firebase project and setup the database.
 1. create a heroku account to host your bot
 
-### client.json options
-
-```js
-const a = 3;
-```
-
-steps
-
-running development mode
+### Running development mode
 
 1. install node.js
 1. clone the repo
