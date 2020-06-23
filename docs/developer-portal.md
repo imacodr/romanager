@@ -14,4 +14,4 @@ Now go to the **Bot** tab and select **Add Bot**.
 
 Once you're done with that lets go back to the start and go to the next step.
 
-[Go back](README.md)
+[Go back](../README.md)
