@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const nbx = require("noblox.js");
 
 const firebase = require("./firebase");
-const TOKEN = process.env.TOKEN;
+const TOKEN = process.env.BOT_TOKEN;
 
 const PREFIX = process.env.PREFIX;
 
