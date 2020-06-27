@@ -11,7 +11,7 @@
 <h1 align="center">Documentation can be found below</h1>
 
 <center>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/BVPKKGRoSVA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+![video](./docs/youtube.png)(https://www.youtube.com/watch?v=BVPKKGRoSVA&t=3s)
 </center>
 
 ## Steps to host without changing the code
