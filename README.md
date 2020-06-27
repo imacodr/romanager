@@ -25,6 +25,8 @@
 1. [Create a firebase project and setup the database.](/docs/firebase.md)
 1. [Heroku Hosting](/docs/heroku.md)
 
+[Commands](/docs/commands.md)
+
 ### Running development mode
 
 1. Install node.js
