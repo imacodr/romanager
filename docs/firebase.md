@@ -34,4 +34,4 @@ After you created your collection, document and field click the **key** value an
 
 You are done with the Firebase part after this. Lets go to the Heroku Hosting part.
 
-[Go back](../README.md) | [Next step](./docs/heroku.md)
+[Go back](../README.md) | [Next step](./heroku.md)
