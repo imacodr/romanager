@@ -22,7 +22,7 @@ After that download the service account notepad and keep it as we will need it l
 
 Now go back to the Firebase dashboard and select **Database**.
 
-Click **Create database** and press Done until you are inside hte dashboard.
+Click **Create database** and press Done until you are inside the dashboard.
 
 After you are inside click **Start collection** and put the following order of names.
 
@@ -34,4 +34,4 @@ After you created your collection, document and field click the **key** value an
 
 You are done with the Firebase part after this. Lets go to the Heroku Hosting part.
 
-[Go back](../README.md) | [Next step](./)
+[Go back](../README.md) | [Next step](./docs/heroku.md)

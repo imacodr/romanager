@@ -10,6 +10,10 @@
 
 <h1 align="center">Documentation can be found below</h1>
 
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BVPKKGRoSVA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
+
 ## Steps to host without changing the code
 
 1. Fork the repo to your own github account.
@@ -21,7 +25,9 @@
 
 ### Running development mode
 
-1. install node.js
-1. clone the repo
-1. run npm install (if yarn then run yarn install)
-1. run npm dev to start the bot
+1. Install node.js
+1. Clone the repo
+1. Run npm install (if yarn then run yarn install)
+1. Run npm dev to start the bot
+
+(If you would like to help do this part please open a pull request and I'll check)

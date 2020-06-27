@@ -29,6 +29,8 @@ const promote = require("./commands/promote");
 const demote = require("./commands/demote");
 const exile = require("./commands/exile");
 const joinrequest = require("./commands/joinrequest");
+const shout = require("./commands/shout");
+const help = require("./commands/help");
 
 module.exports = async () => {
   const COMMANDS = {
@@ -41,6 +43,8 @@ module.exports = async () => {
     demote: demote(),
     exile: exile(),
     joinrequest: joinrequest(),
+    shout: shout(),
+    help: help(),
   };
 
   const client = new Discord.Client();

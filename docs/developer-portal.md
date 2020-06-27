@@ -12,6 +12,6 @@ Choose a name and click in the application.
 Now go to the **Bot** tab and select **Add Bot**.
 ![addbot](addbot.png)
 
-Once you're done with that lets go back to the start and go to the next step.
+Once you're done with that lets go to the next step.
 
 [Go back](../README.md) | [Next step](./firebase.md)
