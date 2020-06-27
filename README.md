@@ -12,6 +12,8 @@
 
 # [Tutorial Video](https://www.youtube.com/watch?v=BVPKKGRoSVA&t=3s)
 
+![thumbnail](./docs/youtube.png)
+
 ## Steps to host without changing the code
 
 1. Fork the repo to your own github account.
