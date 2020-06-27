@@ -2,6 +2,8 @@
 
 - Change Rank
 
+Changes a user's rank
+
 Usage:
 
 ```
@@ -12,37 +14,47 @@ Usage:
 
 - Demote
 
+Demotes the user to one rank below
+
 Usage:
 
 ```
-!demote[username];
+!demote [username]
 ```
 
 - Promote
 
+Promotes the user to one rank above
+
 Usage:
 
 ```
-!promote[username];
+!promote [username]
 ```
 
 - Exile
 
+Removes the user from the group
+
 Usage:
 
 ```
-!exile[username];
+!exile [username]
 ```
 
 - Get Info
 
+Get's player info
+
 Usage:
 
 ```
-!info[username];
+!info [username]
 ```
 
 - Join Request
+
+Accpet/Deny join requests
 
 Usage:
 
@@ -52,11 +64,15 @@ Usage:
 
 - Shout
 
+Shout in the group
+
 ```
 !shout [message or none to clear]
 ```
 
 - Help
+
+Get help links.
 
 ```
 !help
