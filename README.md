@@ -10,9 +10,7 @@
 
 <h1 align="center">Documentation can be found below</h1>
 
-<center>
 # [Tutorial Video](https://www.youtube.com/watch?v=BVPKKGRoSVA&t=3s)
-</center>
 
 ## Steps to host without changing the code
 
