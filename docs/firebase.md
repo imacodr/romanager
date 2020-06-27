@@ -9,9 +9,29 @@ After that click the **Create a project** button
 
 Choose a name, click next until you are in the dashboard.
 
-Now go to the **Bot** tab and select **Add Bot**.
-![addbot](addbot.png)
+# Getting a service account info notepad
 
-Once you're done with that lets go back to the start and go to the next step.
+Now go to the **Settings** tab.
+![settings](settings.png)
 
-[Go back](../README.md)
+Select **Project setting** and go to **Service Accounts**.
+
+After that download the service account notepad and keep it as we will need it later.
+
+# Database
+
+Now go back to the Firebase dashboard and select **Database**.
+
+Click **Create database** and press Done until you are inside hte dashboard.
+
+After you are inside click **Start collection** and put the following order of names.
+
+![collection](collections.png)
+
+Put the collection name **cookies**. The document name **cookie**. And the Field name **key** and as string.
+
+After you created your collection, document and field click the **key** value and put your Roblox cookie. Need help getting it? [Click here!](https://www.youtube.com/watch?v=zHODmGst480)
+
+You are done with the Firebase part after this. Lets go to the Heroku Hosting part.
+
+[Go back](../README.md) | [Next step](./)

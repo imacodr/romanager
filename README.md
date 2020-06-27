@@ -15,8 +15,9 @@
 1. Fork the repo to your own github account.
    ![fork](./docs/fork.png)
 1. [Create a bot in the Discord developer portal.](/docs/developer-portal.md)
+1. [Get the Roblox bot cookie.](https://www.youtube.com/watch?v=zHODmGst480)
 1. [Create a firebase project and setup the database.](/docs/firebase.md)
-1. create a heroku account to host your bot
+1. [Heroku Hosting](/docs/heroku.md)
 
 ### Running development mode
 
