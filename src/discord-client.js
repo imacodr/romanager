@@ -78,15 +78,6 @@ module.exports = async () => {
     const [command, ...values] = message.content.split(PREFIX)[1].split(" ");
     const commandObj = COMMANDS[command];
 
-    if (!commandObj) {
-      await message.reply(
-        "Unrecognized command. Accepted commands are: " +
-          Object.keys(COMMANDS)
-            .map((key) => `${PREFIX}${key}`)
-            .join(", ")
-      );
-      return;
-    }
     commandObj(message, values.join(" "));
   });
   await startApp();
