@@ -6,12 +6,16 @@ module.exports = () => async (message, value) => {
     return message.channel.send("You do not have permissions.");
 
   const doneembed = new Discord.MessageEmbed()
-    .setColor(`GREEN`)
+    .setColor("36393f")
     .setTitle("✅ Successfully Exiled")
     .setDescription(`Succsessfully exiled ${value}.`)
     .setThumbnail(message.author.avatarURL())
     .setTimestamp()
-    .setFooter(`Exilation made by ${message.author.username}`);
+    .setFooter(`Exilation made by ${message.author.username}`)
+    .setAuthor(
+      message.author.username + `#${message.author.discriminator}`,
+      message.author.avatarURL()
+    );
 
   try {
     const userid = await nbx.getIdFromUsername(value);
@@ -19,11 +23,15 @@ module.exports = () => async (message, value) => {
     message.channel.send(doneembed);
   } catch (e) {
     const errembed = new Discord.MessageEmbed()
-      .setColor(`RED`)
+      .setColor("36393f")
       .setTitle("❌ Failed")
       .setDescription(e.message)
       .setTimestamp()
-      .setFooter(`Exilation failed by ${message.author.username}`);
+      .setFooter(`Exilation failed by ${message.author.username}`)
+      .setAuthor(
+        message.author.username + `#${message.author.discriminator}`,
+        message.author.avatarURL()
+      );
 
     message.channel.send(errembed);
   }

@@ -17,22 +17,30 @@ module.exports = () => async (message, value) => {
     });
 
     const doneembed = new Discord.MessageEmbed()
-      .setColor(`GREEN`)
+      .setColor("36393f")
       .setTitle("✅ Successfully changed user rank")
       .setDescription(
         `Succsessfully changed ${values[0]}'s rank to ${values[1]}.`
       )
       .setThumbnail(message.author.avatarURL())
       .setTimestamp()
-      .setFooter(`Rank changed made by ${message.author.username}`);
+      .setFooter(`Rank changed made by ${message.author.username}`)
+      .setAuthor(
+        message.author.username + `#${message.author.discriminator}`,
+        message.author.avatarURL()
+      );
     message.channel.send(doneembed);
   } catch (e) {
     const errembed = new Discord.MessageEmbed()
-      .setColor(`RED`)
+      .setColor("36393f")
       .setTitle("❌ Failed")
       .setDescription(e.message)
       .setTimestamp()
-      .setFooter(`Rank change failed by ${message.author.username}`);
+      .setFooter(`Rank change failed by ${message.author.username}`)
+      .setAuthor(
+        message.author.username + `#${message.author.discriminator}`,
+        message.author.avatarURL()
+      );
 
     message.channel.send(errembed);
   }

@@ -8,23 +8,31 @@ module.exports = () => async (message, value) => {
   const userid = await nbx.getIdFromUsername(values[0]);
 
   const doneembed = new Discord.MessageEmbed()
-    .setColor(`GREEN`)
+    .setColor("36393f")
     .setTitle("✅ Successfully Accepted/Denied")
     .setDescription(`Succsessfully accepted/denied ${values[0]}.`)
     .setThumbnail(message.author.avatarURL())
     .setTimestamp()
-    .setFooter(`Acceptance/Denience made by ${message.author.username}`);
+    .setFooter(`Acceptance/Denience made by ${message.author.username}`)
+    .setAuthor(
+      message.author.username + `#${message.author.discriminator}`,
+      message.author.avatarURL()
+    );
 
   try {
     await nbx.handleJoinRequest(process.env.GROUPID, userid, values[1]);
     message.channel.send(doneembed);
   } catch (e) {
     const errembed = new Discord.MessageEmbed()
-      .setColor(`RED`)
+      .setColor("36393f")
       .setTitle("❌ Failed")
       .setDescription(e.message)
       .setTimestamp()
-      .setFooter(`Acceptance/Denience failed by ${message.author.username}`);
+      .setFooter(`Acceptance/Denience failed by ${message.author.username}`)
+      .setAuthor(
+        message.author.username + `#${message.author.discriminator}`,
+        message.author.avatarURL()
+      );
 
     message.channel.send(errembed);
   }

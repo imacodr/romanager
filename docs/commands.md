@@ -8,7 +8,7 @@ Usage:
 
 ```
 
-!changerank [username] [rank name] (NOT ID BUT RANK NAME)
+!setrank [username] [rank name] (NOT ID BUT RANK NAME)
 
 ```
 
@@ -42,14 +42,14 @@ Usage:
 !exile [username]
 ```
 
-- Get Info
+- Who is
 
 Get's player info
 
 Usage:
 
 ```
-!info [username]
+!whois [username]
 ```
 
 - Join Request
