@@ -1,6 +1,8 @@
 const nbx = require("noblox.js");
 const Discord = require("discord.js");
 
+// Shout command
+
 module.exports = () => async (message, value) => {
   let channel = message.channel;
   const doneembed = new Discord.MessageEmbed()
