@@ -1,7 +1,7 @@
 const nbx = require("noblox.js");
 const Discord = require("discord.js");
 
-// Shout command
+// Shout command 
 
 module.exports = () => async (message, value) => {
   let channel = message.channel;
