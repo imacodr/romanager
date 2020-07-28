@@ -74,7 +74,7 @@ module.exports = async () => {
     if (!message.member)
       message.member = await message.guild.fetchMember(message);
 
-    //!claim welcomebot :  command = claim, param = welcomebot
+    
     const [command, ...values] = message.content.split(PREFIX)[1].split(" ");
     const commandObj = COMMANDS[command];
 

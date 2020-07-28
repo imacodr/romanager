@@ -5,6 +5,9 @@ module.exports = () => async (message, value) => {
   let channel = message.channel;
   const userid = await nbx.getIdFromUsername(value);
 
+
+  const role = await nbx.getRankNameInGroup(process.env.GROUPID, userid)
+
   await nbx.getPlayerInfo(userid).then((playerInfo) => {
     let infoEmbed = new Discord.MessageEmbed()
       .setColor("36393f")
@@ -13,10 +16,11 @@ module.exports = () => async (message, value) => {
       .addField(`Account Age (in days)`, playerInfo.age || "Not available")
       .addField(`Join Date`, playerInfo.joinDate || "Not available")
       .addField(`Description`, playerInfo.blurb || "Not available")
+      .addField(`Role in Group`, role)
       .setAuthor(
         message.author.username + `#${message.author.discriminator}`,
         message.author.avatarURL()
       );
-    channel.send(infoEmbed);
+     channel.send(infoEmbed);
   });
 };
