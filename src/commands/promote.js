@@ -5,7 +5,22 @@ module.exports = () => async (message, value) => {
   if (!message.member.hasPermission("MANAGE_SERVER"))
     return message.channel.send("You do not have permissions.");
 
+    const paramaterEmbed = new Discord.MessageEmbed()
+    .setColor("36393f")
+    .setTitle("❌ Failed")
+    .setDescription(`**How to use ${process.env.PREFIX}promote:**\n
+    ${process.env.PREFIX}promote <username>`)
+    .setTimestamp()
+    .setFooter(`Promotion failed by ${message.author.username}`)
+    .setAuthor(
+      message.author.username + `#${message.author.discriminator}`,
+      message.author.avatarURL()
+    );
+
+    if (!value) return message.channel.send(paramaterEmbed)
+
   const userid = await nbx.getIdFromUsername(value);
+  
 
   const doneembed = new Discord.MessageEmbed()
     .setColor("36393f")

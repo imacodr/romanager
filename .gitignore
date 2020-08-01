@@ -1,3 +1,4 @@
 node_modules
 .env
 serviceAccount.json
+.DS_Store
