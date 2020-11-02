@@ -1,10 +1,10 @@
 require("dotenv").config();
 
 const express = require("express");
-const discord = require("./src/discord-client");
+const discord = require("./src/client");
 
 //START DISCORD BOT
-const discordClient = discord();
+const discordClient = discord;
 
 const PORT = process.env.PORT || 3300;
 

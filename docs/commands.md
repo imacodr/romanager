@@ -77,3 +77,9 @@ Get help links.
 ```
 !help
 ```
+
+- Groups (New!)
+
+```
+!groups [username]
+```

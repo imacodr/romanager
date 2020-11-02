@@ -29,7 +29,7 @@
 
 ### Running development mode
 
-1. Install node.js
+1. [Install node.js](https://nodejs.org/en/)
 1. Clone the repo
 1. Run npm install (if yarn then run yarn install)
 1. Run npm dev to start the bot

@@ -8,15 +8,34 @@ module.exports = async (message, value) => {
     const userid = await nbx.getIdFromUsername(value);
 
     const role = await nbx.getRankNameInGroup(process.env.GROUPID, userid);
-    await nbx.getPlayerInfo(userid).then((playerInfo) => {
+
+    const groups = await nbx.getGroups(userid);
+
+    let content = groups.map((group) => "``" + group.Name + "``");
+    let totalMessages = 1;
+
+    do {
+      let msg = [];
+      let msgLength = 0;
+      let complete = false;
+      while (content.length > 0 && !complete) {
+        const group = content[0];
+        if (msgLength + group.length > 1800) {
+          complete = true;
+        } else {
+          msgLength += group.length;
+          msg.push(content.shift());
+        }
+      }
+
       let infoEmbed = new Discord.MessageEmbed()
         .setURL(`https://www.roblox.com/users/${userid}/profile`)
-        .setTitle(`${playerInfo.username}'s profile`)
-        .addField(`Status`, playerInfo.status || "Not available")
-        .addField(`Account Age (in days)`, playerInfo.age || "Not available")
-        .addField(`Join Date`, playerInfo.joinDate || "Not available")
-        .addField(`Description`, playerInfo.blurb || "Not available")
-        .addField(`Role in Group`, role)
+        .setTitle(
+          totalMessages === 1
+            ? `${value}'s groups`
+            : `${value}'s groups | Extended`
+        )
+        .setDescription(msg.join("\n"))
         .setThumbnail(
           `https://www.roblox.com/headshot-thumbnail/image?userId=${userid}&width=420&height=420&format=png`
         )
@@ -24,8 +43,9 @@ module.exports = async (message, value) => {
           message.author.username + `#${message.author.discriminator}`,
           message.author.avatarURL()
         );
-      channel.send(infoEmbed);
-    });
+      await channel.send(infoEmbed);
+      totalMessages++;
+    } while (content.length > 0);
   } catch (e) {
     const errembed = new Discord.MessageEmbed()
       .setDescription("```diff\n" + `- ${e.message}` + "\n```")

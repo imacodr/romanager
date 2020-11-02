@@ -1,52 +1,39 @@
 const nbx = require("noblox.js");
 const Discord = require("discord.js");
 
-module.exports = () => async (message, value) => {
+module.exports = async (message, value) => {
   if (!message.member.hasPermission("MANAGE_SERVER"))
     return message.channel.send("You do not have permissions.");
 
-    const paramaterEmbed = new Discord.MessageEmbed()
-    .setColor("36393f")
-    .setTitle("❌ Failed")
-    .setDescription(`**How to use ${process.env.PREFIX}promote:**\n
-    ${process.env.PREFIX}promote <username>`)
-    .setTimestamp()
-    .setFooter(`Promotion failed by ${message.author.username}`)
-    .setAuthor(
-      message.author.username + `#${message.author.discriminator}`,
-      message.author.avatarURL()
-    );
-
-    if (!value) return message.channel.send(paramaterEmbed)
-
-  const userid = await nbx.getIdFromUsername(value);
-  
-
-  const doneembed = new Discord.MessageEmbed()
-    .setColor("36393f")
-    .setTitle("✅ Successfully Promoted")
-    .setDescription(`Succsessfully promoted ${value}.`)
-    .setThumbnail(message.author.avatarURL())
-    .setTimestamp()
-    .setFooter(`Promotion made by ${message.author.username}`)
-    .setAuthor(
-      message.author.username + `#${message.author.discriminator}`,
-      message.author.avatarURL()
-    );
-
   try {
+    const userid = await nbx.getIdFromUsername(value);
+
+    const doneembed = new Discord.MessageEmbed()
+
+      .setDescription(
+        "```diff\n" + `+ Successfully promoted ${value}` + "\n```"
+      )
+      .setThumbnail(
+        `https://www.roblox.com/headshot-thumbnail/image?userId=${userid}&width=420&height=420&format=png`
+      )
+      .setTimestamp()
+      .setFooter(
+        `Promotion made by ${message.author.tag} | ${message.author.id}`
+      )
+      .setAuthor(
+        "Success",
+        "https://images-ext-2.discordapp.net/external/Euk4_11WeLVghXuYj50jAqZQhOl_AKIQowNnt4S0yeA/https/media.discordapp.net/attachments/539579135786352652/641188971010850816/627171162857930802.png"
+      );
     await nbx.promote(process.env.GROUPID, userid);
     message.channel.send(doneembed);
   } catch (e) {
     const errembed = new Discord.MessageEmbed()
-      .setColor("36393f")
-      .setTitle("❌ Failed")
-      .setDescription(e.message)
+      .setDescription("```diff\n" + `- ${e.message}` + "\n```")
       .setTimestamp()
-      .setFooter(`Promotion failed by ${message.author.username}`)
+      .setFooter(`Failed by ${message.author.tag} | ${message.author.id}`)
       .setAuthor(
-        message.author.username + `#${message.author.discriminator}`,
-        message.author.avatarURL()
+        "Failed",
+        "https://media.discordapp.net/attachments/539579135786352652/641188940983959555/627171202464743434.png"
       );
 
     message.channel.send(errembed);
