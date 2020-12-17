@@ -19,7 +19,7 @@
     "express": "^4.17.1",
     "firebase-admin": "^8.12.1",
     "fs": "^0.0.1-security",
-    "noblox.js": "^3.8.0-0",
+    "noblox.js": "^4.7.3",
     "node-forge": "^0.10.0",
     "path": "^0.12.7"
   }
