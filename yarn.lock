@@ -1939,9 +1939,9 @@ next-tick@~1.0.0:
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
   integrity sha1-yobR/ogoFpsBICCOPchCS524NCw=
 
-noblox.js@^4.7.3:
-  version "4.7.3"
-  resolved "https://registry.yarnpkg.com/noblox.js/-/noblox.js-4.7.3.tgz#a5b37ecc9a911e40746097f8cb56a7d735571d0b"
+noblox.js@^3.8.0-0:
+  version "3.8.0-0"
+  resolved "https://registry.yarnpkg.com/noblox.js/-/noblox.js-3.8.0-0.tgz#a5b37ecc9a911e40746097f8cb56a7d735571d0b"
   integrity sha512-XZnm9fzhyHRRC6j09NHrmmVHALdr2w3HnGlnepzWUf0SInTNco9FD3ECx2rle8nUJKEkxcbcrH3TnVs+gvJ1Ug==
   dependencies:
     bluebird "^3.5.4"
