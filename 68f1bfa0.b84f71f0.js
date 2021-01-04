@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[11],{81:function(o){o.exports=JSON.parse('{"allTagsPath":"/moblox/blog/tags","slug":"welcome","name":"welcome","count":1,"permalink":"/moblox/blog/tags/welcome"}')}}]);
