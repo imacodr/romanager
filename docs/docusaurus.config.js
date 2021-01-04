@@ -1,8 +1,8 @@
 module.exports = {
   title: "moblox",
   tagline: "Making group management easier",
-  url: "https://imacodr.github.io",
-  baseUrl: "/moblox/",
+  url: "https://moblox.js.org",
+  baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "./files/logo.png",
