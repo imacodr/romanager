@@ -6,7 +6,7 @@
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://imacodr.github.io/blog"/>
     <subtitle>moblox Blog</subtitle>
-    <icon>https://imacodr.github.io/../files/logo.png</icon>
+    <icon>https://imacodr.github.io/./files/logo.png</icon>
     <entry>
         <title type="html"><![CDATA[Welcome to the new documentation and blog]]></title>
         <id>welcome</id>
