@@ -2,14 +2,14 @@
 <rss version="2.0">
     <channel>
         <title>moblox Blog</title>
-        <link>https://moblox.js.org/blog</link>
+        <link>https://imacodr.github.io/blog</link>
         <description>moblox Blog</description>
         <lastBuildDate>Sun, 03 Jan 2021 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <item>
             <title><![CDATA[Welcome to the new documentation and blog]]></title>
-            <link>https://moblox.js.org/blog/welcome</link>
+            <link>https://imacodr.github.io/moblox/blog/welcome</link>
             <guid>welcome</guid>
             <pubDate>Sun, 03 Jan 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[This will be the new blog and documentation website for Moblox. I am excited to post new updates and features coming.]]></description>
