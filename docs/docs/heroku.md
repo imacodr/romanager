@@ -1,12 +1,15 @@
-# Heroku Hosting
+---
+id: heroku
+title: Heroku Hosting
+---
 
 Learn how to actually make your bot works
 
-# Create a account
+### Create a account
 
 You will create a Heroku account before anything
 
-# Creating an app and setting up
+### Creating an app and setting up
 
 Go to the right side of the page and click on **New**. Then select **Create new app**.
 
@@ -22,7 +25,7 @@ Click **Search**, if the repository below is the same click **Connect**.
 
 Now, once you are done enable **Automatic Deploys** but do not deploy yet!
 
-# Configuration Variables
+### Configuration Variables
 
 After you are done with the part above go to **Settings**.
 
@@ -53,6 +56,4 @@ This can all be found at the notepad from Firebase.
 
 Now here is what it should look like. (values are not done in this example just the variables)
 
-![variables](heroku-variables.png)
-
-If you have any questions join our support serve rby clicking at the 'moblox' logo at [read me](../README.md).
+![variables](../files/heroku-variables.png)

@@ -1,4 +1,7 @@
-# moblox commands
+---
+id: commands
+title: Commands
+---
 
 - Change Rank
 
@@ -7,9 +10,7 @@ Changes a user's rank
 Usage:
 
 ```
-
 !setrank [username] [rank name] (NOT ID BUT RANK NAME)
-
 ```
 
 - Demote
