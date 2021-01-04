@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://imacodr.github.io/blog</id>
+    <id>https://moblox.js.org/blog</id>
     <title>moblox Blog</title>
     <updated>2021-01-03T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://imacodr.github.io/blog"/>
+    <link rel="alternate" href="https://moblox.js.org/blog"/>
     <subtitle>moblox Blog</subtitle>
-    <icon>https://imacodr.github.io/./files/logo.png</icon>
+    <icon>https://moblox.js.org/./files/logo.png</icon>
     <entry>
         <title type="html"><![CDATA[Welcome to the new documentation and blog]]></title>
         <id>welcome</id>
-        <link href="https://imacodr.github.io/moblox/blog/welcome"/>
+        <link href="https://moblox.js.org/blog/welcome"/>
         <updated>2021-01-03T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[This will be the new blog and documentation website for Moblox. I am excited to post new updates and features coming.]]></summary>
     </entry>
