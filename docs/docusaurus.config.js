@@ -5,7 +5,7 @@ module.exports = {
   baseUrl: "/moblox/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
-  favicon: "../files/logo.png",
+  favicon: "./files/logo.png",
   organizationName: "imacodr", // Usually your GitHub org/user name.
   projectName: "moblox", // Usually your repo name.
   themeConfig: {
@@ -13,7 +13,7 @@ module.exports = {
       title: "moblox",
       logo: {
         alt: "mobloxLogo",
-        src: "/files/logo.png",
+        src: "./files/logo.png",
       },
       items: [
         {
