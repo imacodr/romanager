@@ -13,7 +13,7 @@ module.exports = {
       title: "moblox",
       logo: {
         alt: "mobloxLogo",
-        src: "./files/logo.png",
+        src: "./files/moblox.png",
       },
       items: [
         {
